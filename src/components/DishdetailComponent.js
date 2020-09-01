@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
-
+import { Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbItem } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 class DishDetail extends Component {
 
@@ -36,6 +36,17 @@ class DishDetail extends Component {
         return (
             <div className="container">
                 <div className="row">
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to='/home'>Home </Link> </BreadcrumbItem>
+                        <BreadcrumbItem><Link to='/menu'>Menu </Link> </BreadcrumbItem>
+                        <BreadcrumbItem active>{this.props.dish.name}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <div className="col-12">
+                        <h3>{this.props.dish.name}</h3>
+                        <hr />
+                    </div>
+                </div>
+                <div className="row">
                     <div className="col-12 col-md-5 m-1">
                         <Card>
                             <CardImg width="100%" src={this.props.dish.image} alt={this.props.dish.name} />
@@ -46,7 +57,7 @@ class DishDetail extends Component {
                         </Card>
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        {this.renderComments(this.props.dish.comments)}
+                        {this.renderComments(this.props.comments)}
                     </div>
                 </div>
             </div>
