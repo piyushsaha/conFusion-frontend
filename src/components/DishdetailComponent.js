@@ -77,7 +77,7 @@ class CommentForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isCommentFormOpen: true
+            isCommentFormOpen: false
         }
         this.toggleCommentForm = this.toggleCommentForm.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
