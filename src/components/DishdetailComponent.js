@@ -60,7 +60,10 @@ class DishDetail extends Component {
                     <div className="col-12 col-md-5 m-1">
                         {this.renderComments(this.props.comments)}
                         <br />
-                        <CommentForm />
+                        <CommentForm
+                            dishId={this.props.dish.id}
+                            addComment={this.props.addComment} 
+                        />
                     </div>
                 </div>
             </div>
@@ -88,8 +91,7 @@ class CommentForm extends Component {
         })
     }
     handleSubmit(values) {
-        console.log(JSON.stringify(values))
-        alert(JSON.stringify(values))
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment)
     }
 
     render() {
