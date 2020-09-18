@@ -5,6 +5,7 @@ import {
 import { LocalForm, Control, Errors } from 'react-redux-form'
 import { Link } from 'react-router-dom'
 import Loading from './LoadingComponent'
+import { baseURL } from '../shared/baseURL'
 
 class DishDetail extends Component {
     renderComments(comments) {
@@ -70,7 +71,7 @@ class DishDetail extends Component {
                     <div className="row">
                         <div className="col-12 col-md-5 m-1">
                             <Card>
-                                <CardImg width="100%" src={this.props.dish.image} alt={this.props.dish.name} />
+                                <CardImg width="100%" src={ baseURL + this.props.dish.image} alt={this.props.dish.name} />
                                 <CardBody>
                                     <CardTitle>{this.props.dish.name}</CardTitle>
                                     <CardText>{this.props.dish.description}</CardText>
