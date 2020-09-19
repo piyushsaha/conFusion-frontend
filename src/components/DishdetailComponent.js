@@ -6,6 +6,7 @@ import { LocalForm, Control, Errors } from 'react-redux-form'
 import { Link } from 'react-router-dom'
 import Loading from './LoadingComponent'
 import { baseURL } from '../shared/baseURL'
+import { FadeTransform, Fade, Stagger } from 'react-animation-components'
 
 class DishDetail extends Component {
     renderComments(comments) {
@@ -19,15 +20,19 @@ class DishDetail extends Component {
                     <h4>Comments</h4>
                     <ul className="list-unstyled">
                         {
-                            comments.map(comment => {
-                                return (
-                                    <li className="py-3">
-                                        {comment.comment}
-                                        <br />
-                                        {`--${comment.author}, ${comment.date}`}
-                                    </li>
-                                )
-                            })
+                            <Stagger in>
+                                {comments.map(comment => {
+                                    return (
+                                        <Fade in>
+                                            <li className="py-3">
+                                                {comment.comment}
+                                                <br />
+                                                {`--${comment.author}, ${comment.date}`}
+                                            </li>
+                                        </Fade>
+                                    )
+                                })}
+                            </Stagger>
                         }
                     </ul>
                 </div>
@@ -70,13 +75,20 @@ class DishDetail extends Component {
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-5 m-1">
-                            <Card>
-                                <CardImg width="100%" src={ baseURL + this.props.dish.image} alt={this.props.dish.name} />
-                                <CardBody>
-                                    <CardTitle>{this.props.dish.name}</CardTitle>
-                                    <CardText>{this.props.dish.description}</CardText>
-                                </CardBody>
-                            </Card>
+                            <FadeTransform
+                                in
+                                transformProps={{
+                                    exitTransform: 'scale(0.5) translateY(-50%)'
+                                }}
+                            >
+                                <Card>
+                                    <CardImg width="100%" src={baseURL + this.props.dish.image} alt={this.props.dish.name} />
+                                    <CardBody>
+                                        <CardTitle>{this.props.dish.name}</CardTitle>
+                                        <CardText>{this.props.dish.description}</CardText>
+                                    </CardBody>
+                                </Card>
+                            </FadeTransform>
                         </div>
                         <div className="col-12 col-md-5 m-1">
                             {this.renderComments(this.props.comments)}

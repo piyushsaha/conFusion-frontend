@@ -201,53 +201,6 @@
       "comment": "It's your birthday, we're gonna party!",
       "author": "25 Cent",
       "date": "2011-12-02T17:57:28.556094Z"
-    },
-    {
-      "dishId": 1,
-      "rating": "3",
-      "author": "Piyush",
-      "comment": "asadwre",
-      "date": "2020-09-19T13:36:47.510Z",
-      "id": 20
-    },
-    {
-      "dishId": 1,
-      "rating": "3",
-      "author": "Piyush",
-      "comment": "asadwre",
-      "date": "2020-09-19T13:36:49.781Z",
-      "id": 21
-    },
-    {
-      "dishId": 1,
-      "rating": "4",
-      "author": "asas",
-      "comment": "asasas",
-      "date": "2020-09-19T13:36:59.335Z",
-      "id": 22
-    },
-    {
-      "dishId": 1,
-      "rating": "3",
-      "author": "ssdsdsdsdsdsd",
-      "comment": "sd",
-      "date": "2020-09-19T13:39:56.860Z",
-      "id": 23
-    },
-    {
-      "dishId": 1,
-      "author": "qqqqqq",
-      "comment": "qqqqqqqqqqqq",
-      "date": "2020-09-19T13:40:07.701Z",
-      "id": 24
-    },
-    {
-      "dishId": 1,
-      "rating": "3",
-      "author": "Piyush Saha",
-      "comment": "This is a test comment",
-      "date": "2020-09-19T13:42:06.602Z",
-      "id": 25
     }
   ],
   "promotions": [
