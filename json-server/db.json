@@ -201,6 +201,22 @@
       "comment": "It's your birthday, we're gonna party!",
       "author": "25 Cent",
       "date": "2011-12-02T17:57:28.556094Z"
+    },
+    {
+      "dishId": 2,
+      "rating": "4",
+      "author": "as",
+      "comment": "asasa",
+      "date": "2020-09-20T13:37:10.056Z",
+      "id": 20
+    },
+    {
+      "dishId": 3,
+      "rating": "2",
+      "author": "Piyush Saha",
+      "comment": "This is a test comment.",
+      "date": "2020-09-21T11:43:51.360Z",
+      "id": 21
     }
   ],
   "promotions": [
@@ -263,6 +279,28 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "firstname": "Piyush",
+      "lastname": "Saha",
+      "telnum": "7687893696",
+      "email": "itsmepiyushsaha@gmail.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "This is a test feedback.",
+      "date": "2020-09-21T12:16:37.981Z",
+      "id": 2
+    },
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "telnum": "1234567890",
+      "email": "john@doe.com",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "Another test feedback.",
+      "date": "2020-09-21T12:18:35.810Z",
+      "id": 3
     }
   ]
 }
